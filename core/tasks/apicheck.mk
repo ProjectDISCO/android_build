@@ -76,9 +76,9 @@ $(eval $(call check-api, \
 
 .PHONY: update-public-api
 update-public-api: $(INTERNAL_PLATFORM_API_FILE) | $(ACP)
-	@echo Copying current.txt
+	@echo -e ${CL_GRN}"Copying current.txt"${CL_RST}
 	$(hide) $(ACP) $(INTERNAL_PLATFORM_API_FILE) frameworks/base/api/current.txt
-	@echo Copying removed.txt
+	@echo -e ${CL_GRN}"Copying removed.txt"${CL_RST}
 	$(hide) $(ACP) $(INTERNAL_PLATFORM_REMOVED_API_FILE) frameworks/base/api/removed.txt
 
 update-api : update-public-api
@@ -124,9 +124,9 @@ $(eval $(call check-api, \
 update-api : update-system-api
 
 update-system-api: $(INTERNAL_PLATFORM_SYSTEM_API_FILE) | $(ACP)
-	@echo Copying system-current.txt
+	@echo -e ${CL_GRN}"Copying system-current.txt"${CL_RST}
 	$(hide) $(ACP) $(INTERNAL_PLATFORM_SYSTEM_API_FILE) frameworks/base/api/system-current.txt
-	@echo Copying system-removed.txt
+	@echo -e ${CL_GRN}"Copying system-removed.txt"${CL_RST}
 	$(hide) $(ACP) $(INTERNAL_PLATFORM_SYSTEM_REMOVED_API_FILE) frameworks/base/api/system-removed.txt
 
 endif
