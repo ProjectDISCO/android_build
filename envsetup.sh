@@ -1,5 +1,5 @@
 # export disco version:
-export dver=1.0
+export dver=1.5
 
 function hmm() {
 cat <<EOF
