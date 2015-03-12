@@ -28,8 +28,14 @@ PRODUCT_PACKAGES := \
     WAPPushManager
 
 PRODUCT_PACKAGES += \
+    Galaxy4 \
+    HoloSpiralWallpaper \
+    LiveWallpapers \
     LiveWallpapersPicker \
+    MagicSmokeWallpapers \
+    NoiseField \
     PhaseBeam \
+    VisualizationWallpapers \
     PhotoTable
 
 # Additional settings used in all AOSP builds
@@ -45,7 +51,7 @@ PRODUCT_LOCALES := en_US
 PRODUCT_AAPT_CONFIG := normal
 
 # Get some sounds
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13_48.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 
 # Get the TTS language packs
 $(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
