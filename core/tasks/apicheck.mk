@@ -74,7 +74,6 @@ $(eval $(call check-api, \
     $(call doc-timestamp-for,api-stubs) \
     ))
 
-<<<<<<< HEAD
 .PHONY: update-public-api
 update-public-api: $(INTERNAL_PLATFORM_API_FILE) | $(ACP)
 	@echo -e ${CL_GRN}"Copying current.txt"${CL_RST}
