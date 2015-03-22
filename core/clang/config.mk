@@ -42,6 +42,9 @@ CLANG_CONFIG_EXTRA_CFLAGS += \
 CLANG_CONFIG_EXTRA_CFLAGS += \
   -Werror=int-conversion
 
+CLANG_CONFIG_EXTRA_CFLAGS += \
+  -Wno-unused-command-line-argument
+
 CLANG_CONFIG_UNKNOWN_CFLAGS := \
   -funswitch-loops \
   -fno-tree-sra \
