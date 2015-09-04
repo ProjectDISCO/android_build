@@ -510,16 +510,21 @@ function lunch()
     local product=$(echo -n $selection | sed -e "s/-.*$//")
     check_product $product
     local exit_status=$?
-    if [ $exit_status -ne 0 ]
+
+    # don't try to find emulator product in device sources (because it doesn't have a device tree)
+    if [[ $product != *emulator ]]
     then
+      if [ $exit_status -ne 0 ]
+      then
         # if we can't find a product, try to grab it off the ProjectDisco github
         T=$(gettop)
         pushd $T > /dev/null
         build/tools/roomservice.py $product
         popd > /dev/null
         check_product $product
-    else
+      else
         build/tools/roomservice.py $product true
+      fi
     fi
 
     if [ $? -ne 0 ]
