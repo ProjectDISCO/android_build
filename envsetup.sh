@@ -1761,10 +1761,10 @@ if [ "x$SHELL" != "x/bin/bash" ]; then
     esac
 fi
 
-# Grab products from vendor/disco/configs/devices.txt. Ignore vendorsetup.sh files.
-for device_codename in $(cat vendor/disco/configs/devices.txt)
+# Grab products from vendor/disco/products/
+for product in $(ls -1 vendor/disco/products/ | grep 'disco_' | sed 's/.mk//')
   do
-    add_lunch_combo disco_$device_codename-userdebug
+    add_lunch_combo $product-userdebug
   done
 
 addcompletions
