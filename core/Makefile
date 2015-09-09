@@ -3,13 +3,19 @@
 # Build system colors
 
 ifneq ($(BUILD_WITH_COLORS),0)
+  CL_RST="\033[0m"
   CL_RED="\033[31m"
   CL_GRN="\033[32m"
   CL_YLW="\033[33m"
   CL_BLU="\033[34m"
   CL_MAG="\033[35m"
   CL_CYN="\033[36m"
-  CL_RST="\033[0m"
+  CL_BLD_RED="\033[1m\033[31m"
+  CL_BLD_GRN="\033[1m\033[32m"
+  CL_BLD_YLW="\033[1m\033[33m"
+  CL_BLD_BLU="\033[1m\033[34m"
+  CL_BLD_MAG="\033[1m\033[35m"
+  CL_BLD_CYN="\033[1m\033[36m"
 endif
 
 # HACK: clear LOCAL_PATH from including last build target before calling
