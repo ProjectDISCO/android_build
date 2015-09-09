@@ -1861,8 +1861,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE)
 	   $(if $(OEM_OTA_CONFIG), -o $(OEM_OTA_CONFIG)) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-.PHONY: otapackage
+.PHONY: otapackage disco
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
+disco: otapackage
 
 endif    # build_ota_package
 
