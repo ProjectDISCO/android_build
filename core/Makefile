@@ -1588,6 +1588,8 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 disco: otapackage
 
+	@echo -e ${CL_BLD_GRN}"Package complete: $(INTERNAL_OTA_PACKAGE_TARGET)"${CL_RST}
+
 endif    # recovery_fstab is defined
 endif    # TARGET_NO_KERNEL != true
 endif    # TARGET_DEVICE != generic*
