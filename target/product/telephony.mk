@@ -22,6 +22,7 @@ PRODUCT_PACKAGES := \
     Dialer \
     CallLogBackup \
     rild \
-    Stk
+    Stk \
+    CellBroadcastReceiver
 
 PRODUCT_COPY_FILES := \
