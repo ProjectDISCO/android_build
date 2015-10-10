@@ -37,7 +37,7 @@ except ImportError:
 # set this to the default remote to use in repo
 default_rem = "github"
 # set this to the default revision to use (branch/tag name)
-default_rev = "lollipop"
+default_rev = "marshmallow"
 # set this to the remote that you use for projects from your team repos
 default_team_rem = "github"
 # this shouldn't change unless google makes changes
