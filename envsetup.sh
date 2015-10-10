@@ -519,6 +519,11 @@ function lunch()
     check_product $product
     local exit_status=$?
 
+    # create device directory if it doesn't exist (needed for roomservice)
+    if [ ! -d device ]; then
+      mkdir device
+    fi
+
     # don't try to find emulator product in device sources (because it doesn't have a device tree)
     if [[ $product != *emulator ]]
     then
