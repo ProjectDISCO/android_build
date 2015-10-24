@@ -30,7 +30,6 @@ PRODUCT_PACKAGES := \
 	Launcher3 \
 	librs_jni \
 	LiveWallpapersPicker \
-	Music \
 	rild \
 	SdkSetup \
 	SmokeTest \
